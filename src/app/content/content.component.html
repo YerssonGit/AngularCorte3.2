@@ -1,1 +1,31 @@
-<p>content works!</p>
+<div class="container">
+   <div class="row">
+       <div class="col">
+            <input class="form-control" type="text" [(ngModel)]="recibeTarea" (keyup.enter)="agregarTarea()" placeholder="Ingrese una nueva tarea">
+        </div>
+    </div>
+
+    <div class="col-lg-6 offset-lg-3 mt-3">
+
+        <div *ngIf="listaTarea.length == 0">
+            <h5>No tiene tareas pendientes!!!</h5>
+        </div>
+
+        <ul class="list-group">
+            
+            <li *ngFor="let nuevoArray of listaTarea; let i= index" class="list-group">
+                <span class="cursor text-success">
+                    <i class="fa-solid fa-rotate"></i>
+                </span>
+
+            {{nuevoArray.nombreTarea}}
+            {{nuevoArray.estadoTarea}}
+            <span class="cursor text-danger">
+                <i (click)="eliminarTarea(i)" class="fa fa-minus-square" aria-hidden="true"></i>
+            </span>
+          </li>
+        </ul>
+    </div>
+  </div>  
+    
+  

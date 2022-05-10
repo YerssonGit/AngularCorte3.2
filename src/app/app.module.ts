@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
+import { FooterComponent } from './footer/footer.component';
+import { ListasComponent } from './content/listas/listas.component';
+import { TablaComponent } from './content/tabla/tabla.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
+    NavbarComponent,
+    ContentComponent,
     FooterComponent,
-    ContentComponent
+    ListasComponent,
+    TablaComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

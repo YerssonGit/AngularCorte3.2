@@ -1,7 +1,15 @@
-import { isConstructorDeclaration } from "typescript";
+export class Tareas {
 
-rt class Tareas{
-  nombreTarea: String;
-  estadoTarea: String;
+    nombreTarea: String;
+    estadoTarea: boolean;
+
+    constructor(nombreTarea:String,estadoTarea:boolean){
+
+        this.nombreTarea = nombreTarea;
+
+        this.estadoTarea = estadoTarea;
+    
+    }
+
+
 }
-isConstructorDeclaration()
